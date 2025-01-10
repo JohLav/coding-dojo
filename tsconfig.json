@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "types": ["vitest/globals"],
+    "lib": ["decorators", "dom", "es5", "scripthost", "es2015.collection"]
+  }
+}

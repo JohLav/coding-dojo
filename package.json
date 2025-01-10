@@ -1,0 +1,21 @@
+{
+  "name": "mentorat-lea-matthieu",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage --coverage.enabled",
+    "fmt": "biome check . --write --unsafe && biome format . --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@vitest/coverage-istanbul": "^2.1.8",
+    "vite": "^6.0.1",
+    "vitest": "^2.1.6"
+  }
+}
