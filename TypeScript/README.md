@@ -13,6 +13,7 @@ As part of my continuous improvement efforts, I actively participate in **Test-D
 3. [EmployeeReport](https://codingdojo.org/kata/Employee-Report/)
 4. [PokerHands](https://codingdojo.org/kata/PokerHands/)
 5. [Bowling](https://codingdojo.org/kata/Bowling/)
+6. [Gilded Rose](https://codingdojo.org/kata/gilded-rose/)
 
 ### Workflow Approach
 1. **Problem Exploration**

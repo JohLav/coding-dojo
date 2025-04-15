@@ -11,48 +11,47 @@ export class Item {
 }
 
 export class GildedRose {
-  items: Array<Item>;
   private readonly BACKSTAGE_CONCERT = 'Backstage passes to a TAFKAL80ETC concert';
   private readonly AGED_BRIE = 'Aged Brie';
   private readonly SULFURAS = 'Sulfuras, Hand of Ragnaros';
 
-  constructor(items = [] as Array<Item>) {
-    this.items = items;
-  }
+  constructor(public items: Item[] = []) { }
 
   updateQuality() {
-    for (let i = 0; i < this.items.length; i++) {
-      let currentItem = this.items[i];
-
-      if (currentItem.name === this.AGED_BRIE || currentItem.name === this.BACKSTAGE_CONCERT) {
-        this.increaseQuality(currentItem);
-        if (currentItem.name === this.BACKSTAGE_CONCERT) {
-          this.increaseConcertExtrinsicQuality(currentItem);
-        }
-      } else {
-        this.decreaseQuality(currentItem);
-      }
-
-      this.decreaseSellIn(currentItem);
-      if (this.sellInReached(currentItem)) {
-        if (currentItem.name === this.BACKSTAGE_CONCERT) {
-          currentItem.quality = 0;
-        }
-
-        if (currentItem.name === this.AGED_BRIE) {
-          this.increaseQuality(currentItem);
-        }
-
-        if (currentItem.name !== this.AGED_BRIE && currentItem.name !== this.BACKSTAGE_CONCERT) {
-          this.decreaseQuality(currentItem);
-        }
-      }
+    for (const item of this.items) {
+      this.updateItemQuality(item);
     }
-
     return this.items;
   }
 
-  private sellInReached(item: Item) {
+  private updateItemQuality(item: Item) {
+    if (item.name === this.SULFURAS) {
+      // No action needed for Sulfuras items
+      return;
+    }
+    if (item.name === this.AGED_BRIE || item.name === this.BACKSTAGE_CONCERT) {
+      this.increaseQuality(item);
+      if (item.name === this.BACKSTAGE_CONCERT) {
+        this.increaseConcertExtrinsicQuality(item);
+      }
+    } else {
+      this.decreaseQuality(item);
+    }
+
+    this.decreaseSellIn(item);
+
+    if (this.hasSellInPassed(item)) {
+      if (item.name === this.BACKSTAGE_CONCERT) {
+        item.quality = 0;
+      } else if (item.name === this.AGED_BRIE) {
+        this.increaseQuality(item);
+      } else {
+        this.decreaseQuality(item);
+      }
+    }
+  }
+
+  private hasSellInPassed(item: Item) {
     return item.sellIn < 0;
   }
 

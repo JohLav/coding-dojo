@@ -2,12 +2,13 @@ import { expect, test } from 'vitest';
 
 const FIZZ = 'Fizz';
 const BUZZ = 'Buzz';
+const FIZZBUZZ = 'FizzBuzz';
 
 function fizzBuzz(input: number): string {
   if (typeof input !== 'number' || isNaN(input)) {
     throw new Error('Invalid input');
   }
-  if (isMultipleOf3And5(input)) return 'FizzBuzz';
+  if (isMultipleOf3And5(input)) return FIZZBUZZ;
   if (isMultipleOf3(input)) return FIZZ;
   if (isMultipleOf5(input)) return BUZZ;
   return input.toString();
@@ -29,10 +30,10 @@ test.each([
   [1, '1'],
   [2, '2'],
   [7, '7'],
-  [0, 'FizzBuzz'],
+  [0, FIZZBUZZ],
   [-3, FIZZ],
   [-5, BUZZ],
-  [-15, 'FizzBuzz'],
+  [-15, FIZZBUZZ],
 ])('should return %s with input %i', (input, expected) => {
   expect(fizzBuzz(input)).toBe(expected);
 });
