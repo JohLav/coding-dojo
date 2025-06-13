@@ -4,8 +4,8 @@ As part of my continuous improvement efforts, I actively participate in **Test-D
 
 ## Tools and Technologies
 
-- **Programming Language**: TypeScript
-- **Testing Framework**: Vitest
+- **Programming Language**: TypeScript, Java
+- **Testing Framework**: Vitest, JUnit
 
 ## Practiced Katas
 

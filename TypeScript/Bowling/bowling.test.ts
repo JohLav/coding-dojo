@@ -17,16 +17,16 @@ function bowlingScoreCalculate(game: string): number {
     if (roll2 === '/') {
       if (i === 9) {
         const roll3 = frame.charAt(2);
-        const roll3Score = roll3 !== GUTTER ? parseInt(roll3) : 0;
+        const roll3Score = roll3 !== GUTTER ? Number.parseInt(roll3) : 0;
         frameScore += 10 + roll3Score;
       } else {
         const nextFrame = frames[i + 1];
         const nextRoll1 = nextFrame.charAt(0);
-        frameScore = 10 + parseInt(nextRoll1);
+        frameScore = 10 + Number.parseInt(nextRoll1);
       }
     } else {
-      const roll1Score = roll1 !== GUTTER ? parseInt(roll1) : 0;
-      const roll2Score = roll2 !== GUTTER ? parseInt(roll2) : 0;
+      const roll1Score = roll1 !== GUTTER ? Number.parseInt(roll1) : 0;
+      const roll2Score = roll2 !== GUTTER ? Number.parseInt(roll2) : 0;
       frameScore = roll1Score + roll2Score;
     }
 

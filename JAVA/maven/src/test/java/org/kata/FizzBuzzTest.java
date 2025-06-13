@@ -1,4 +1,4 @@
-package org.matthieusb.kata;
+package org.kata;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

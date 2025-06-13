@@ -5,7 +5,7 @@ const BUZZ = 'Buzz';
 const FIZZBUZZ = 'FizzBuzz';
 
 function fizzBuzz(input: number): string {
-  if (typeof input !== 'number' || isNaN(input)) {
+  if (typeof input !== 'number' || Number.isNaN(input)) {
     throw new Error('Invalid input');
   }
   if (isMultipleOf3And5(input)) return FIZZBUZZ;
@@ -38,22 +38,28 @@ test.each([
   expect(fizzBuzz(input)).toBe(expected);
 });
 
-test.each([[3], [6], [9], [-3]])('should return "Fizz" with input %i', (input) => {
-  expect(fizzBuzz(input)).toBe(FIZZ);
-});
+test.each([[3], [6], [9], [-3]])(
+  'should return "Fizz" with input %i',
+  (input) => {
+    expect(fizzBuzz(input)).toBe(FIZZ);
+  },
+);
 
 test.each([[5], [10], [-5]])('should return "Buzz" for input %i', (input) => {
   expect(fizzBuzz(input)).toBe(BUZZ);
 });
 
-test.each([[15], [30], [-15]])('should return "FizzBuzz" for input %i', (input) => {
-  expect(fizzBuzz(input)).toBe('FizzBuzz');
-});
+test.each([[15], [30], [-15]])(
+  'should return "FizzBuzz" for input %i',
+  (input) => {
+    expect(fizzBuzz(input)).toBe('FizzBuzz');
+  },
+);
 
 test('should handle large multiples correctly', () => {
   expect(fizzBuzz(3000)).toBe('FizzBuzz');
 });
 
 test('should throw an error for non-numeric input', () => {
-  expect(() => fizzBuzz(NaN)).toThrow('Invalid input');
-})
+  expect(() => fizzBuzz(Number.NaN)).toThrow('Invalid input');
+});
