@@ -1,13 +1,14 @@
 # Coding-Dojo
 
-
 As part of my continuous improvement efforts, I actively participate in **Test-Driven Development (TDD)** training sessions. These sessions are conducted in collaboration with two senior developers and emphasize hands-on practice to deepen my understanding of TDD principles and techniques. 
 
-### Tools and Technologies
+## Tools and Technologies
+
 - **Programming Language**: TypeScript
 - **Testing Framework**: Vitest
 
-### Practiced Katas
+## Practiced Katas
+
 1. [FizzBuzz](https://codingdojo.org/fr/kata/FizzBuzz/)
 2. [LeapYears](https://codingdojo.org/kata/LeapYears/)
 3. [EmployeeReport](https://codingdojo.org/kata/Employee-Report/)
@@ -15,7 +16,8 @@ As part of my continuous improvement efforts, I actively participate in **Test-D
 5. [Bowling](https://codingdojo.org/kata/Bowling/)
 6. [Gilded Rose](https://codingdojo.org/kata/gilded-rose/)
 
-### Workflow Approach
+## Workflow Approach
+
 1. **Problem Exploration**
     - Select coding katas from the **CodingDojo website** as practical exercises.
     - Understand the problem requirements and constraints thoroughly before implementation.
@@ -36,7 +38,8 @@ As part of my continuous improvement efforts, I actively participate in **Test-D
     - Iterate through the **Red-Green-Refactor cycle** until the solution is complete.
     - Expand the test coverage as new scenarios or edge cases are discovered.
 
-### Benefits Gained
+## Benefits Gained
+
 - Enhanced my ability to write **clean, maintainable code**.
 - Improved my debugging skills by catching issues early in the development cycle.
 - Strengthened my collaboration skills through knowledge exchange with senior developers.
