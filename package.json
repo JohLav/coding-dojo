@@ -1,5 +1,5 @@
 {
-  "name": "mentorat-lea-matthieu",
+  "name": "coding-dojo",
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
@@ -14,7 +14,6 @@
   "description": "",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@vitest/coverage-istanbul": "^3.2.3",
     "vite": "^6.0.1",
     "vitest": "^3.2.3"
   }
